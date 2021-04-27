@@ -7,9 +7,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Birthday-Cake-Candles", "Bi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diagonal Difference", "Diagonal Difference\Diagonal Difference.csproj", "{BDB1FDD4-38E3-4718-9445-0016A8BE588F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GradingStudents", "GradingStudents\GradingStudents.csproj", "{16939D00-05A3-403E-9F4D-3FC230730BA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GradingStudents", "GradingStudents\GradingStudents.csproj", "{16939D00-05A3-403E-9F4D-3FC230730BA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniMaxSum", "MiniMaxSum\MiniMaxSum.csproj", "{C47E7696-CD69-43C4-8536-8776E060F617}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniMaxSum", "MiniMaxSum\MiniMaxSum.csproj", "{C47E7696-CD69-43C4-8536-8776E060F617}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MigratoryBirds", "MigratoryBirds\MigratoryBirds.csproj", "{5013892E-5188-4F5B-ADBD-D83F3F84100F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayOfTheProgrammer", "DayOfTheProgrammer\DayOfTheProgrammer.csproj", "{056D3058-4252-4821-9518-903B7592E450}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BillDivision", "BillDivision\BillDivision.csproj", "{86E254E5-E5C8-4D02-8B75-3D4D16B500F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +39,18 @@ Global
 		{C47E7696-CD69-43C4-8536-8776E060F617}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C47E7696-CD69-43C4-8536-8776E060F617}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C47E7696-CD69-43C4-8536-8776E060F617}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5013892E-5188-4F5B-ADBD-D83F3F84100F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5013892E-5188-4F5B-ADBD-D83F3F84100F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5013892E-5188-4F5B-ADBD-D83F3F84100F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5013892E-5188-4F5B-ADBD-D83F3F84100F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{056D3058-4252-4821-9518-903B7592E450}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{056D3058-4252-4821-9518-903B7592E450}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{056D3058-4252-4821-9518-903B7592E450}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{056D3058-4252-4821-9518-903B7592E450}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86E254E5-E5C8-4D02-8B75-3D4D16B500F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86E254E5-E5C8-4D02-8B75-3D4D16B500F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86E254E5-E5C8-4D02-8B75-3D4D16B500F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86E254E5-E5C8-4D02-8B75-3D4D16B500F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
