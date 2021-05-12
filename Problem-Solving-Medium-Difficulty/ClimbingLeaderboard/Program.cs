@@ -6,18 +6,6 @@ namespace ClimbingLeaderboard
 {
     //https://www.hackerrank.com/challenges/climbing-the-leaderboard/problem
 
-    class Player
-    {
-        public Player(int score)
-        {
-            Score = score;
-        }
-        public int Score { get; set; }
-
-        public int Rank { get; set; }
-
-    }
-
     class Program
     {
         static void Main(string[] args)
@@ -41,67 +29,61 @@ namespace ClimbingLeaderboard
 
         private static List<int> ClimbingLeaderboard(List<int> ranked, List<int> player)
         {
-            List<Player> players = new List<Player>(ranked.Count + 1);
+            List<int> rankingLeaderboard = new List<int>(ranked.Count);
+            int currentRank = 1;
 
             for (int i = 0; i < ranked.Count; i++)
             {
-                Player player1 = new Player(ranked[i]);
-                players.Add(player1);
-            }
-
-            players = players.OrderByDescending(x => x.Score).ToList();
-            DenseRanking(players, 0);
-
-            Player newPlayer = new Player(0);
-            players.Add(newPlayer);
-
-            List<int> rankingResult = new List<int>(player.Count);
-
-            for (int i = 0; i < player.Count; i++)
-            {
-                int newPlayerIndex = players.IndexOf(newPlayer);
-
-                players[newPlayerIndex].Score = player[i];
-                players = players.OrderByDescending(x => x.Score).ToList();
-                newPlayerIndex = players.IndexOf(newPlayer);
-
-                DenseRanking(players, newPlayerIndex);
-
-                rankingResult.Add(players[newPlayerIndex].Rank);
-            }
-
-            return rankingResult;
-        }
-
-        private static void DenseRanking(List<Player> players, int index)
-        {
-            int currentRank = 1;
-            if (index > 0)
-            {
-                currentRank = players[index - 1].Rank;
-            }
-
-
-            for (int i = index; i < players.Count; i++)
-            {
                 if (i == 0)
                 {
-                    players[i].Rank = currentRank;
+                    rankingLeaderboard.Add(currentRank);
                 }
                 else
                 {
-                    if (players[i].Score == players[i - 1].Score)
-                    {
-                        players[i].Rank = players[i - 1].Rank;
-                    }
-                    else
+                    if (ranked[i] < ranked[i-1])
                     {
                         currentRank++;
-                        players[i].Rank = currentRank;
                     }
-
+                    rankingLeaderboard.Add(currentRank);
                 }
             }
+
+            List<int> playerRank = new List<int>();
+            int currentPosition = ranked.Count - 1;
+            for (int i = 0; i < player.Count; i++)
+            {
+                int playerPoints = player[i];
+                for (int j = currentPosition; j >= 0; j--)
+                {
+                    if (j > ranked.Count - 1)
+                    {
+                        j = ranked.Count - 1;
+                    }
+                    if (playerPoints > ranked[0])
+                    {
+                        playerRank.Add(rankingLeaderboard[0]);
+                        break;
+                    }
+                    if (playerPoints < ranked[j])
+                    {
+                        playerRank.Add(rankingLeaderboard[j] + 1);
+                        currentPosition = j;
+                        break;
+                    }
+                    else if (playerPoints == ranked[j])
+                    {
+                        playerRank.Add(rankingLeaderboard[j]);
+                        currentPosition = j;
+                        break;
+                    }
+                    else if (true)
+                    {
+
+                    }
+                }
+
+            }
+            return playerRank;
         }
     }
 }
